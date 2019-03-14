@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>注册页面</title>
+	<link rel="stylesheet" type="text/css" href="css/register.css" />
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body class="regbg">
+	<div class="reg_main">
+		<!-- 头部 -->
+		<div class="reg_main_header">
+			<div class="reg_logo"></div>
+			<div class="info">
+				已有空中网账号，立即
+				<a target="_blank" href="http://www.kongzhong.com/">返回首页</a>
+			</div>
+		</div>
+		<!-- 内容 -->
+		<div class="reg_main_content" id="bb">
+			<!-- 左侧 -->
+			<div class="left_main">
+				<span class="reg_left_tip"></span>
+				<div class="tabs" id="aa">
+					<a class="click" href="#">
+						<p class="m_ico_click">手机账号注册</p>
+						<p class="p_link">独享手机靓号，安全有保障</p>
+					</a>
+					<a class="link" href="#">
+						<p class="e_ico_link">邮箱账号注册</p>
+						<p class="p_link">常用邮箱注册，方便易记忆</p>
+					</a>
+				</div>
+			</div>
+			<!-- 右侧 手机 -->
+			<form id="register_frm" class="content" action="/acc" method="post" style="display: block;">
+				<div class="rightMain">
+					<div class="right_wrapper">
+						<div class="t_line">
+							<div class="l_list wone_zc1">手机号码：</div>
+							<div class="r_list wtwo_zc1">
+								<div class="input_text1 quan">
+									<input id="useraccount" type="input" name="useraccount" value="" maxlength="11" class="input_text" />
+									<span class="checkExistRong" id="checkExistPhone"></span>
+								</div>
+							</div>
+						</div>
+						<div class="t_line">
+							<div class="l_list wone_zc1">短信验证码：</div>
+							<div class="r_list wtwo_zc1" style="position: relative;">
+								<div class="input_text">
+									<input type="text" name="vcode" id="vcode" class="input_text2" maxlength="6" />
+									<input id="sms_code_btn" type="button" value="获取验证码" class="txtCenter getVali" />
+								</div>
+							</div>
+						</div>
+						<div class="t_line">
+							<div class="l_list wone_zc1">设置密码：</div>
+							<div class="r_list wtwo_zc1 init_lineheight">
+								<div class="input_text2 quan">
+									<input id="password" name="password" kztype="pwd" value="" maxlength="16" type="password" class="input_text">
+									<span class="checkExistRong" id="checkExistMima"></span>
+								</div>
+							</div>
+						</div>
+						<div class="t_line">
+							<div class="l_list wone_zc1">确认密码：</div>
+							<div class="r_list wtwo_zc1">
+								<div class="input_text1 quan">
+									<input id="password2" name="password2" maxlength="18" type="password" class="input_text">
+								</div>
+							</div>
+						</div>
+						<div class="reg_line">
+							<p class="zc_sfz">
+								<span class="fleft">
+									根据《网络游戏管理暂行办法》关于实名注册的规定，请正确填写您的真实姓名与身份证号码
+								</span>
+							</p>
+						</div>
+						<div id="Approve">
+							<div class="t_line">
+								<div class="l_list wone_zc1">真实姓名：</div>
+								<div class="r_list wtwo_zc1">
+									<div class="input_text1 quan">
+										<input id="realname" type="text" maxlength="50" name="realname" class="input_text">
+										<span class="checkExistRong" id="checkExistname"></span>
+									</div>
+								</div>
+							</div>
+							<div class="t_line">
+								<div class="l_list wone_zc1">身份证号：</div>
+								<div class="r_list wtwo_zc1">
+									<div class="input_text1 quan">
+										<input id="personid" type="text" maxlength="18" name="personid" class="input_text">
+										<span class="checkExistRong" id="checkExistID"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="t_line">
+							<div class="l_list wone_zc1">&nbsp;</div>
+							<div class="r_list wtwo_zc2">
+								<a id="submit_btn" class="btn_10" href="http://127.0.0.1/TK/1823%E9%A1%B9%E7%9B%AE/Sign.html">
+									<span>提交注册</span>
+								</a>
+							</div>
+						</div>
+						<div class="t_line">
+							<div class="l_list wone_zc1">&nbsp;</div>
+							<div class="r_list wtwo succ_send">
+								<input id="agreement_chk" type="checkbox" checked="" class="mr15">
+								<span>我接受</span>
+								<span class="fblue">《</span>
+								<a href="/rules.jsp" target="_blank" class="fblue">空中网用户注册协议</a>
+								<span class="fblue">》</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+
+			<!-- 右侧 邮箱 -->
+			<form id="register_frm" class="content" action="/acc" method="post" style="display: none;">
+				<div class="rightMain">
+					<div class="right_wrapper">
+						<div class="t_line">
+							<div class="l_list wone_zc1">电子邮箱：</div>
+							<div class="r_list wtwo_zc1">
+								<div class="input_text1 quan">
+									<input id="useraccount" type="input" name="useraccount" value="" maxlength="11" class="input_text" />
+								</div>
+							</div>
+						</div>
+
+						<div class="t_line">
+							<div class="l_list wone_zc1">设置密码：</div>
+							<div class="r_list wtwo_zc1 init_lineheight">
+								<div class="input_text2 quan">
+									<input id="password" name="password" kztype="pwd" maxlength="16" type="password" class="input_text" onpaste="return false"
+									 oncontextmenu="return false" oncopy="return false" oncut="return false" autocomplete="off">
+								</div>
+							</div>
+						</div>
+						<div class="t_line">
+							<div class="l_list wone_zc1">确认密码：</div>
+							<div class="r_list wtwo_zc1">
+								<div class="input_text1 quan">
+									<input id="password2" name="password2" maxlength="18" type="password" class="input_text">
+								</div>
+							</div>
+						</div>
+						<div class="t_line">
+							<div class="l_list wone_zc1">验证码：</div>
+							<div class="r_list wtwo_zc1">
+								<input id="verif_code" name="vcode" maxlength="4" type="text" class="input_text" kztype="captcha">
+								<div class="yanzheng"></div>
+							</div>
+						</div>
+						<div class="reg_line">
+							<p class="zc_sfz">
+								<span class="fleft">
+									根据《网络游戏管理暂行办法》关于实名注册的规定，请正确填写您的真实姓名与身份证号码
+								</span>
+							</p>
+						</div>
+						<div id="Approve a">
+							<div class="t_line">
+								<div class="l_list wone_zc1">真实姓名：</div>
+								<div class="r_list wtwo_zc1">
+									<div class="input_text1 quan">
+										<input id="realname" type="text" maxlength="50" name="realname" class="input_text">
+									</div>
+								</div>
+							</div>
+							<div class="t_line">
+								<div class="l_list wone_zc1">身份证号：</div>
+								<div class="r_list wtwo_zc1">
+									<div class="input_text1 quan">
+										<input id="personid" type="text" maxlength="18" name="personid" class="input_text">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="t_line">
+							<div class="l_list wone_zc1">&nbsp;</div>
+							<div class="r_list wtwo_zc2">
+								<a href="http://127.0.0.1/TK/1823%E9%A1%B9%E7%9B%AE/Sign.html" id="submit_btn" class="btn_10">
+									<span>提交注册</span>
+								</a>
+							</div>
+						</div>
+						<div class="t_line">
+							<div class="l_list wone_zc1">&nbsp;</div>
+							<div class="r_list wtwo succ_send">
+								<input id="agreement_chk" type="checkbox" checked="" class="mr15">
+								<span>我接受</span>
+								<span class="fblue">《</span>
+								<a href="/rules.jsp" target="_blank" class="fblue">空中网用户注册协议</a>
+								<span class="fblue">》</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+
+		</div>
+	</div>
+</body>
+
+</html>
+
+<script src="js/register.js" type="text/javascript" charset="utf-8"></script>

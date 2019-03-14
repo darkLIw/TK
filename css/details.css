@@ -1,0 +1,311 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0; 
+}
+
+li {
+  list-style: none; 
+}
+
+a {
+  text-decoration: none;
+   outline: none;
+}
+
+a:hover {
+  text-decoration: none; 
+}
+
+img {
+  border: none;
+  vertical-align: middle; 
+}
+
+#topInfo{
+	background-color: #FAFAFA;
+	border-bottom: 1px solid #cbcbcb;
+}
+
+.topshortcut{
+	height: 35px;
+}
+
+.maxW{
+	margin: 0 auto;
+	width: 1190px;
+}
+
+.topshortcut p{
+	line-height: 35px;
+	font-size: 12px;
+	color: #626262;
+	float: left;
+}
+
+.topshortcut p a{
+	color: #ec6941;
+}
+
+.topshortcut p.linkFloatRight{
+	float: right;
+}
+
+.topshortcut p.linkFloatRight a{
+	display: inline-block;
+	color: #626262;
+	zoom: 1;
+	vertical-align: top;
+	margin-left: 24px;
+	line-height: 35px;
+}
+
+.topshortcut p.linkFloatRight a:hover{
+	color: #ec6941;
+}
+
+.topNav{
+	padding: 24px 0;
+	position: relative;
+}
+
+.logo table td{
+	padding-right: 20px;
+	font-family: "微软雅黑";
+	font-size: 20px;
+	color: #434343;
+}
+
+.search{
+	width: 510px;
+	height: 34px;
+	right: 280px;
+	border: 2px solid #ff6600;
+}
+
+.search, .shoppingCart, .step{
+	position: absolute;
+	top: 50%;
+	margin-top: -19px;
+}
+
+.search i{
+	position: absolute;
+	display: block;
+	width: 18px;
+	height: 18px;
+	overflow: hidden;
+	background-position: -83px 0;
+	top: 50%;
+	margin-top: -9px;
+	left: 6px;
+}
+
+.css-sp{
+	background-image: url(../img/homepage/css-sp.png);
+	background-repeat: no-repeat;
+}
+
+.search .l{
+	font-size: 12px;
+	color: #919191;
+	background: #fff;
+	width: 340px;
+	padding: 0 32px;
+}
+
+.search input{
+	float: left;
+	height: 34px;
+	line-height: 34px;
+	border: none;
+}
+
+.search .button{
+	background: #ff6600;
+	text-align: center;
+	width: 106px;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #fff;
+	cursor: pointer;
+}
+
+.search p{
+	position: absolute;
+	left: 0;
+	top: 42px;
+	font-size: 12px;
+	color: #919191;
+}
+
+.search p a{
+	margin-right: 10px;
+	color: #919191;
+}
+
+.shoppingCart{
+	right: 0;
+	text-align: center;
+	color: #434343;
+	font-size: 12px;
+	background: #F9F9F9;
+	width: 134px;
+	height: 36px;
+	line-height: 36px;
+	border: 1px solid #D4D4D4;
+	text-indent: 1em;
+}
+
+.shoppingCart i{
+	position: absolute;
+	display: block;
+	overflow: hidden;
+	width: 20px;
+	height: 18px;
+	background-position: -63px 0;
+	top: 9px;
+	left: 14px;
+}
+
+.shoppingCart a{
+	color: #434343;
+}
+
+/* 主体开头 */
+/* 菜单导航 开头 */
+#nav{
+	border-bottom: 2px solid #ff6600;
+	position: relative;
+	z-index: 100;
+}
+
+.menuW{
+	position: relative;
+	height: 34px;
+}
+/* 菜单详情 开头 */
+.menu{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 206px;
+	height: 36px;
+}
+
+.menuTitle{
+	font-family: "微软雅黑";
+	text-indent: 12px;
+	font-size: 14px;
+	color: #fff;
+	font-weight: bold;
+	height: 34px;
+	line-height: 35px;
+	background: #ff6600;
+	position: relative;
+}
+
+.menuTitle span{
+	background: url(../img/details/downarrow.png) no-repeat 0 center;
+	width: 16px;
+	font-family: "宋体";
+	text-indent: -999999px;
+	overflow: hidden;
+	color: #fff;
+	font-size: 12px;
+	height: 100%;
+	line-height: 40px;
+	position: absolute;
+	display: block;
+	right: 12px;
+	top: 0;
+}
+/* 菜单详情 结束 */
+
+/* 菜单分类细则 开始 */
+.menuFullList{
+	display: none;
+	position: absolute;
+	z-index: 5;
+	top: 36px;
+}
+
+.wotList, .wowpList, .wowsList{
+	border-style: solid;
+	border-width: 1px;
+	border-color: #fff #D0D0D0 #D0D0D0 #D0D0D0;
+	width: 204px;
+	height: 150px;
+}
+
+.wotLink{
+	padding-top: 39px;
+	padding-bottom: 39px;
+}
+
+.wotLink, .wowpLink, .wowsLink{
+	display: block;
+	padding-left: 38px;
+	padding-right: 38px;
+	background: url(../img/details/op.png) repeat 0 0;
+}
+
+.css-sp{
+	height: 72px;
+	background-position: -193px 0;
+}
+
+.wotLink span, .wowpLink span, .wowsLink span{
+	display: block;
+	cursor: pointer;
+	width: 128px;
+	overflow: hidden;
+}
+
+.typeList{
+	display: none;
+	position: absolute;
+	left: 205px;
+	top: 0;
+	background: #EAEAEA url(../img/details/op2.png) repeat 3px 0;
+	border: 1px solid #ff6600;
+	width: 723px;
+	height: 454px;
+}
+
+.typeList dl{
+	overflow: hidden;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #313131;
+	display: block;
+	margin-top: 36px;
+}
+
+
+
+/* 菜单分类细则 结束 */
+
+/* 菜单导航 结束 */
+/* 主体结束 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
